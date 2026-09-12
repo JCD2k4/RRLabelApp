@@ -2,8 +2,8 @@
 
 A small Next.js app. Drop in images or a video, click dots or drag boxes, hit
 **Export**, and get a ZIP that a PyTorch `Dataset` reads with no further work.
-Everything runs in the browser — no upload, no backend, no API keys — and your
-work autosaves to IndexedDB, so a refresh never costs you anything.
+Everything runs in the browser and your
+work autosaves to IndexedDB
 
 ## Run it
 
