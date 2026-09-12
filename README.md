@@ -1,4 +1,4 @@
-# MASKER — a lazy annotator for robotics CV
+# An annotator for robotics CV
 
 A small Next.js app. Drop in images or a video, click dots or drag boxes, hit
 **Export**, and get a ZIP that a PyTorch `Dataset` reads with no further work.
@@ -13,7 +13,7 @@ npm run dev          # http://localhost:8777
 ```
 
 Needs Node 20.9 or newer. There is no backend, no database and no API key to
-set up — the annotator is the page.
+set up.
 
 For a faster, non-reloading version: `npm run build && npm start`.
 
