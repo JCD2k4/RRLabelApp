@@ -175,6 +175,3 @@ The page is a client component and prerenders to static HTML, so `npm start` nee
 no server work at runtime — `next build && next start` is only serving files (plus
 passing `/assist/*` through to the trainer, if you run one).
 
-## License
-
-MIT — see [LICENSE](LICENSE). Do what you like with it.
