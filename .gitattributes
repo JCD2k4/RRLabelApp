@@ -1,0 +1,12 @@
+# One line ending everywhere, so a Windows clone does not rewrite every file
+* text=auto eol=lf
+
+# Never diff or line-end-convert these
+*.pt  binary
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.mp4 binary
+*.mov binary

@@ -1,0 +1,18 @@
+# Only needed for the optional live-suggestion trainer (assist.py) and the
+# training scripts. The annotator itself runs entirely in the browser and needs
+# nothing from this file.
+#
+# Installing straight from here gives you CPU-only torch, which works but is
+# slow. For a GPU, install torch first from the CUDA index, then come back:
+#
+#   python3 -m venv .venv
+#   .venv/bin/pip install torch torchvision --index-url https://download.pytorch.org/whl/cu132
+#   .venv/bin/pip install -r requirements.txt
+#
+# pip leaves an already-satisfied torch alone, so that order keeps the CUDA
+# build. Versions below are floors, matching a setup known to work.
+
+torch>=2.6
+torchvision>=0.21
+numpy>=1.26
+pillow>=10.0

@@ -1,0 +1,99 @@
+:root{
+  --bg:#14161a; --panel:#1b1e24; --panel2:#22262e; --line:#2e333d;
+  --fg:#e6e9ef; --dim:#9aa3b2; --acc:#4c9aff; --ok:#39d353; --bad:#ff5c5c;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);font:13px/1.4 ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif;overflow:hidden}
+button,input,select{font:inherit;color:inherit}
+button{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:5px 9px;cursor:pointer}
+button:hover{background:#2b313b}
+button.on{background:var(--acc);border-color:var(--acc);color:#04122b;font-weight:600}
+button.ghost{background:transparent}
+button:disabled{opacity:.4;cursor:default}
+input[type=text],input[type=number],select{background:#12141a;border:1px solid var(--line);border-radius:6px;padding:4px 7px;min-width:0}
+label{color:var(--dim)}
+
+.app{display:flex;flex-direction:column;height:100dvh}
+.row{display:flex;align-items:center;gap:6px}
+.sep{width:1px;height:22px;background:var(--line);margin:0 4px;flex-shrink:0}
+.spacer{flex:1}
+
+header{height:46px;display:flex;align-items:center;gap:6px;padding:0 10px;background:var(--panel);border-bottom:1px solid var(--line);overflow-x:auto;flex-shrink:0}
+header button{white-space:nowrap}
+.brand{font-weight:700;letter-spacing:.3px;color:var(--acc);white-space:nowrap}
+
+main{display:flex;flex:1;min-height:0}
+aside{background:var(--panel);display:flex;flex-direction:column;flex-shrink:0}
+.left{width:186px;border-right:1px solid var(--line)}
+.right{width:280px;border-left:1px solid var(--line)}
+.phead{padding:7px 10px;font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--dim);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:6px}
+.pbody{overflow-y:auto;flex:1;min-height:0}
+.pblock{border-bottom:1px solid var(--line)}
+
+.stage{flex:1;position:relative;background:#0e1013;overflow:hidden;min-width:0}
+.stage canvas{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}
+.empty{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--dim);text-align:center;pointer-events:none;padding:20px}
+.empty b{color:var(--fg);font-size:16px}
+.status{position:absolute;left:8px;bottom:8px;background:#000a;padding:3px 8px;border-radius:5px;color:var(--dim);font-size:11px;pointer-events:none}
+.toast{position:absolute;left:50%;top:12px;transform:translateX(-50%);background:#000c;border:1px solid var(--line);padding:6px 12px;border-radius:7px;pointer-events:none;z-index:5}
+
+.thumb{display:flex;gap:7px;align-items:center;padding:5px 7px;cursor:pointer;border-bottom:1px solid #23272f;width:100%;background:none;border-left:none;border-right:none;border-top:none;text-align:left;border-radius:0}
+.thumb:hover{background:var(--panel2)}
+.thumb.sel{background:#20324d;box-shadow:inset 3px 0 0 var(--acc)}
+.thumb img{width:52px;height:36px;object-fit:cover;background:#000;border-radius:3px;flex-shrink:0}
+.thumb .nm{font-size:11px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.thumb .ct{font-size:10px;color:var(--dim)}
+.thumb .ct.has{color:var(--ok)}
+
+.cls{display:flex;align-items:center;gap:6px;padding:4px 8px}
+.cls .sw{width:15px;height:15px;padding:0;border-radius:4px;flex-shrink:0;border:1px solid #0006;cursor:pointer;background:none}
+.cls .key{width:16px;text-align:center;color:var(--dim);font-size:11px}
+.cls input[type=text]{flex:1}
+.cls.sel{background:#20324d}
+
+.ann{display:flex;align-items:center;gap:6px;padding:4px 8px;cursor:pointer;font-size:12px}
+.ann:hover{background:var(--panel2)}
+.ann.sel{background:#20324d}
+.ann .dot{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+
+.plist{max-height:46vh;overflow-y:auto;border:1px solid var(--line);border-radius:7px}
+.prow{display:flex;align-items:center;gap:4px;padding:2px 6px;border-bottom:1px solid #23272f}
+.prow:last-child{border-bottom:none}
+.prow.sel{background:#20324d}
+.prow .pick{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:1px;
+  background:none;border:none;text-align:left;padding:6px 4px;border-radius:5px}
+.prow .pick:hover:not(:disabled){background:var(--panel2)}
+.prow .pick:disabled{opacity:1;cursor:default}
+.prow .pick span{color:var(--dim);font-size:11px}
+
+.x{background:none;border:none;color:var(--dim);cursor:pointer;padding:2px 5px;border-radius:4px}
+.x:hover{color:var(--bad);background:#ff5c5c22}
+
+.backdrop{position:fixed;inset:0;background:#000a;display:flex;align-items:center;justify-content:center;z-index:50}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px;width:420px;max-width:92vw;max-height:86vh;overflow:auto}
+.card h3{margin:0 0 10px;font-size:15px}
+.fld{display:flex;align-items:center;gap:8px;margin:8px 0}
+.fld label{flex:1}
+.chk{display:flex;align-items:center;gap:7px;margin:6px 0;cursor:pointer}
+.bar{height:6px;background:var(--panel2);border-radius:3px;overflow:hidden;margin-top:10px}
+.bar>div{height:100%;background:var(--acc);transition:width .1s}
+
+.mk{display:inline-block;width:6px;height:6px;border-radius:50%;margin-left:5px;vertical-align:middle}
+.mk.learned{background:var(--ok)}
+.mk.pending{background:#ffb020}
+.led{width:7px;height:7px;border-radius:50%;background:#555;display:inline-block}
+.led.live{background:var(--ok)}
+.led.learning{background:#ffb020}
+.led.offline{background:var(--bad)}
+.assist{line-height:1.7}
+.assist .row button{padding:1px 8px;font-size:11px}
+.assist .warn{color:#ffb020;line-height:1.4;margin:3px 0}
+.assist input[type=range]{width:90px}
+
+kbd{background:#0e1013;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:1px 5px;font-size:11px;font-family:ui-monospace,monospace}
+.help{padding:8px 10px;font-size:11px;color:var(--dim);line-height:1.9}
+
+.pbody::-webkit-scrollbar,.card::-webkit-scrollbar,header::-webkit-scrollbar{width:9px;height:9px}
+.pbody::-webkit-scrollbar-thumb,.card::-webkit-scrollbar-thumb,header::-webkit-scrollbar-thumb{background:#3a404b;border-radius:5px}

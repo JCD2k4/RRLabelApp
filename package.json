@@ -1,0 +1,30 @@
+{
+  "name": "robotics-mask",
+  "version": "1.0.0",
+  "description": "Browser-based box and mask annotator for robotics computer vision, exporting straight to a PyTorch Dataset.",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "predev": "node scripts/sync-loader.mjs",
+    "dev": "next dev -p 8777",
+    "prebuild": "node scripts/sync-loader.mjs",
+    "build": "next build",
+    "start": "next start -p 8777",
+    "typecheck": "tsc --noEmit",
+    "assist": ".venv/bin/python assist.py"
+  },
+  "dependencies": {
+    "next": "^16.3.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.9.0"
+  }
+}
